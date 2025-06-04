@@ -6,8 +6,8 @@ class Question(models.Model):
     content = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
-    votes = models.IntegerField(default=0)
     updated_at = models.DateTimeField(auto_now=True)
+    votes = models.IntegerField(default=0)
     is_deleted = models.BooleanField(default=False)
 
     def __str__(self):
@@ -18,8 +18,8 @@ class Answer(models.Model):
     content = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
-    recommend = models.IntegerField(default=0)
     updated_at = models.DateTimeField(auto_now=True)
+    recommend = models.IntegerField(default=0)
     is_deleted = models.BooleanField(default=False)
 
     def __str__(self):
